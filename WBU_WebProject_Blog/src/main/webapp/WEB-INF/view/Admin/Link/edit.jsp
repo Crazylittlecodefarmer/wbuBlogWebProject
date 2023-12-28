@@ -86,7 +86,7 @@
             <blockquote class="mtc-elem-quote mtc-quote-nm">
                 温馨提示：
                 <ul>
-                    <li>URL：如 http://liuyanzhao.com</li>
+                    <li>URL：如 http://Mingtc.com</li>
                     <li>Order：默认是0，Order越大排名越靠前</li>
                 </ul>
             </blockquote>

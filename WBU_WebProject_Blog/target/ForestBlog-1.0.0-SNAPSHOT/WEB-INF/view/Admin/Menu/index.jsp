@@ -55,7 +55,7 @@
                     <div class="mtc-input-block">
                         URL
                         <span style="color: #FF5722; ">*</span>
-                        <input type="text" name="menuUrl" placeholder="如：http://liuyanzhao.com/message.html" autocomplete="off" class="mtc-input" >
+                        <input type="text" name="menuUrl" placeholder="如：http://Mingtc.com/message.html" autocomplete="off" class="mtc-input" >
                     </div>
                     <br>
                     <div class="mtc-input-block">
