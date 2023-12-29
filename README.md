@@ -6,9 +6,9 @@
 后台地址：/admin 或者 /login <br/>
 - -------------------------------------------------------------
 # 项目架构
-##Dependency Diagram
+## Dependency Diagram
 ![image](WBU_WebProject_Blog/pom.png)<br/>
-##Class Diagram
+## Class Diagram
 ![image](WBU_WebProject_Blog/ArticleServiceImpl.png)<br/>
-##Client Side Dependence Diagram
+## Client Side Dependence Diagram
 ![image](WBU_WebProject_Blog/src.png)<br/>
