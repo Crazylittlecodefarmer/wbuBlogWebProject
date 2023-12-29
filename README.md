@@ -5,6 +5,7 @@
  UI用的是21年老版本的Layui组件库和手搓(copy)的css和JavaScript样式<br/>
 后台地址：/admin 或者 /login <br/>
 - -------------------------------------------------------------
+<<<<<<< HEAD
 ## 二、项目架构 <br/>
 ### Dependency Diagram<br/>
 ![image](WBU_WebProject_Blog/PowerPoint/pom.png)<br/>
@@ -64,3 +65,12 @@ forest_blog.sql: 数据库文件，请先创建数据库，然后以运行sql文
 -  IDEA 操作如下：<br/>
 在 tomcat 配置中 Deployment 里面添加，如图
 ![image](WBU_WebProject_Blog/PowerPoint/VirtualFileMapping.png)<br/>
+=======
+# 项目架构
+## Dependency Diagram
+![image](WBU_WebProject_Blog/pom.png)<br/>
+## Class Diagram
+![image](WBU_WebProject_Blog/ArticleServiceImpl.png)<br/>
+## Client Side Dependence Diagram
+![image](WBU_WebProject_Blog/src.png)<br/>
+>>>>>>> d776744216ff5847755816ac70e5499ce6b4cd38
