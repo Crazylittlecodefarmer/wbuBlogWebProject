@@ -55,7 +55,7 @@ forest_blog.sql: 数据库文件，请先创建数据库，然后以运行sql文
 确保 tomcat 配置中 `application context` 是 /，而不是 /WBU_WebProject_Blog。这是导致首页css样式全无的原因，因为引用css路径都是 /xxx/xxx.css<br/>
 ![image](WBU_WebProject_Blog/PowerPoint/serverConfiguration.png)<br/>
 该项目中，需要配置的主要是目录映射。在项目中，文件上传是传到本地，且和项目文件夹不在一起，即源码和上传目录是分离的。 <br/>
-比如我们把 uploads 目录放到 D盘根目录，比如有一张图片路径是 `D:/uploads/2017/10/avatar.jpg`, 我们想在项目中以 `http://loclahost:8080/uploads/past_time/xxx.jpg ` 方式访问，需要以下两步：<br/>
+比如我们把 uploads 目录放到 D盘根目录，我们想在项目中以 `http://loclahost:8080/uploads/past_time/xxx.jpg ` 方式访问，需要以下两步：<br/>
 
 1、 修改 UploadFileController.java 中上传路径，需要修改 rootPath 为你指定的 uploads 目录，如 `String rootPath ="D:/uploads/";` <br/>
 如果不修改，会出现无法上传失败；<br/>
@@ -64,10 +64,3 @@ forest_blog.sql: 数据库文件，请先创建数据库，然后以运行sql文
 -  IDEA 操作如下：<br/>
 在 tomcat 配置中 Deployment 里面添加，如图
 ![image](WBU_WebProject_Blog/PowerPoint/VirtualFileMapping.png)<br/>
-# 项目架构
-## Dependency Diagram
-![image](WBU_WebProject_Blog/pom.png)<br/>
-## Class Diagram
-![image](WBU_WebProject_Blog/ArticleServiceImpl.png)<br/>
-## Client Side Dependence Diagram
-![image](WBU_WebProject_Blog/src.png)<br/>
