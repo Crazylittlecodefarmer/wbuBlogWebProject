@@ -149,7 +149,7 @@
 
     <div class="layui-footer">
         <!-- 底部固定区域 -->
-        © <a href="http://blog.Mingtc.com">言曌博客</a> 2017  欢迎加入开发者交流群 590480292，博主免费回答大家日常问题。同时博主代做毕设，解决开发问题，详情参看 <a href="https://Mingtc.com/shop.html" target="_blank">有偿服务</a>
+        © <a href="https://github.com/Crazylittlecodefarmer/wbuBlogWebProject.git">Web实训项目</a> 2023  欢迎大家加我QQ来讨论<a href="https://qm.qq.com/q/ubeaDDP4A0" target="_blank">1029476351</a>
     </div>
 </div>
 
