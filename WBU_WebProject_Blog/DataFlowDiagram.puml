@@ -1,0 +1,144 @@
+@startuml
+!define ENTITY class
+!define TABLE class
+
+ENTITY User {
+  + user_id: int
+  + user_name: varchar(30)
+  + user_pass: varchar(100)
+  + user_nickname: varchar(100)
+  + user_email: varchar(100)
+  + user_url: varchar(100)
+  + user_avatar: varchar(100)
+  + user_last_login_ip: varchar(30)
+  + user_register_time: datetime
+  + user_last_login_time: datetime
+  + user_status: int
+  + user_role: varchar(20)
+}
+
+ENTITY Article {
+  + article_id: int
+  + article_user_id: int
+  + article_title: varchar(255)
+  + article_content: mediumtext
+  + article_view_count: int
+  + article_comment_count: int
+  + article_like_count: int
+  + article_is_comment: int
+  + article_status: int
+  + article_order: int
+  + article_update_time: datetime
+  + article_create_time: datetime
+  + article_summary: text
+  + article_thumbnail: varchar(255)
+}
+
+ENTITY Category {
+  + category_id: int
+  + category_pid: int
+  + category_name: varchar(50)
+  + category_description: varchar(255)
+  + category_order: int
+  + category_icon: varchar(20)
+}
+
+ENTITY Tag {
+  + tag_id: int
+  + tag_name: varchar(50)
+  + tag_description: varchar(100)
+}
+
+ENTITY Comment {
+  + comment_id: int
+  + comment_pid: int
+  + comment_pname: varchar(255)
+  + comment_article_id: int
+  + comment_author_name: varchar(50)
+  + comment_author_email: varchar(50)
+  + comment_author_url: varchar(50)
+  + comment_author_avatar: varchar(100)
+  + comment_content: varchar(1000)
+  + comment_agent: varchar(200)
+  + comment_ip: varchar(50)
+  + comment_create_time: datetime
+  + comment_role: int
+  + comment_user_id: int
+}
+
+ENTITY Link {
+  + link_id: int
+  + link_url: varchar(255)
+  + link_name: varchar(255)
+  + link_image: varchar(255)
+  + link_description: varchar(255)
+  + link_owner_nickname: varchar(40)
+  + link_owner_contact: varchar(255)
+  + link_update_time: datetime
+  + link_create_time: datetime
+  + link_order: int
+  + link_status: int
+}
+
+ENTITY Menu {
+  + menu_id: int
+  + menu_name: varchar(255)
+  + menu_url: varchar(255)
+  + menu_level: int
+  + menu_icon: varchar(255)
+  + menu_order: int
+}
+
+ENTITY Notice {
+  + notice_id: int
+  + notice_title: varchar(255)
+  + notice_content: varchar(10000)
+  + notice_create_time: datetime
+  + notice_update_time: datetime
+  + notice_status: int
+  + notice_order: int
+}
+
+ENTITY Options {
+  + option_id: int
+  + option_site_title: varchar(255)
+  + option_site_descrption: varchar(255)
+  + option_meta_descrption: varchar(255)
+  + option_meta_keyword: varchar(255)
+  + option_aboutsite_avatar: varchar(255)
+  + option_aboutsite_title: varchar(255)
+  + option_aboutsite_content: varchar(255)
+  + option_aboutsite_wechat: varchar(255)
+  + option_aboutsite_qq: varchar(255)
+  + option_aboutsite_github: varchar(255)
+  + option_aboutsite_weibo: varchar(255)
+  + option_tongji: varchar(255)
+  + option_status: int
+}
+
+ENTITY Page {
+  + page_id: int
+  + page_key: varchar(50)
+  + page_title: varchar(50)
+  + page_content: mediumtext
+  + page_create_time: datetime
+  + page_update_time: datetime
+  + page_view_count: int
+  + page_comment_count: int
+  + page_status: int
+}
+
+User -- Article : Writes
+User -- Comment : Writes
+Article -- Category : Belongs To
+Article -- Tag : Has Tags
+Article -- Comment : Has Comments
+Article -- User : Authored By
+Link -- User : Belongs To
+Menu -- User : Authored By
+Notice -- User : Authored By
+Options -- User : Set By
+Page -- User : Authored By
+Tag -- User : Authored By
+
+@enduml
