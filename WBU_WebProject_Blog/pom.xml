@@ -5,7 +5,7 @@
     <artifactId>WBU_WebProject_Blog</artifactId>
     <packaging>war</packaging>
     <version>1.0.0-SNAPSHOT</version>
-    <name>ForestBlog Maven Webapp</name>
+    <name>WBU_WebProject_Blog Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
 

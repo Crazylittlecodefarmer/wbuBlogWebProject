@@ -1,0 +1,70 @@
+@startuml
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ENTITY class
+!define INTERFACE interface
+!define ABSTRACT abstract
+!define ENUM enum
+
+' 定义颜色
+!define GREEN #008200
+!define GRAY #A9A9A9
+!define DASHED dashed
+!define PLAIN plain
+
+' 设置主题
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+' 定义组件
+[Web 前端] as Frontend
+[后台管理系统] as AdminSystem
+[数据库] as Database
+
+' 定义类
+[AdminController] as AdminController
+[ArticleController] as ArticleController
+[BackArticleController] as BackArticleController
+[BackCategoryController] as BackCategoryController
+[BackCommentController] as BackCommentController
+[BackLinkController] as BackLinkController
+[BackMenuController] as BackMenuController
+[BackNoticeController] as BackNoticeController
+[BackOptionsController] as BackOptionsController
+[BackPageController] as BackPageController
+[BackTagController] as BackTagController
+[BackUserController] as BackUserController
+[CategoryController] as CategoryController
+[CommentController] as CommentController
+[IndexController] as IndexController
+[LinkController] as LinkController
+[NoticeController] as NoticeController
+[PageController] as PageController
+[TagController] as TagController
+[UploadFileController] as UploadFileController
+
+' 定义关系
+Frontend --> AdminSystem: 用户交互
+AdminController --> AdminSystem: 处理管理员操作
+ArticleController --> AdminSystem: 处理文章相关操作
+BackArticleController --> AdminSystem: 后台文章管理
+BackCategoryController --> AdminSystem: 后台分类管理
+BackCommentController --> AdminSystem: 后台评论管理
+BackLinkController --> AdminSystem: 后台链接管理
+BackMenuController --> AdminSystem: 后台菜单管理
+BackNoticeController --> AdminSystem: 后台公告管理
+BackOptionsController --> AdminSystem: 后台选项管理
+BackPageController --> AdminSystem: 后台页面管理
+BackTagController --> AdminSystem: 后台标签管理
+BackUserController --> AdminSystem: 后台用户管理
+CategoryController --> AdminSystem: 处理分类相关操作
+CommentController --> AdminSystem: 处理评论相关操作
+IndexController --> AdminSystem: 处理首页显示
+LinkController --> AdminSystem: 处理链接相关操作
+NoticeController --> AdminSystem: 处理公告相关操作
+PageController --> AdminSystem: 处理页面相关操作
+TagController --> AdminSystem: 处理标签相关操作
+UploadFileController --> AdminSystem: 处理文件上传
+
+AdminSystem --> Database: 存储数据
+@enduml
